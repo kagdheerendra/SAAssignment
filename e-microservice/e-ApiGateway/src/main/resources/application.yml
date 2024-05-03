@@ -15,6 +15,10 @@ logging:
     org.springframework.web: INFO
     org.springframework.security: DEBUG
     org.springframework.security.oauth2: DEBUG
+<<<<<<< HEAD
+=======
+    org.keycloak: DEBUG
+>>>>>>> e61648a (fix: dockerize backend and frontend)
 
 server:
   port: 8080
