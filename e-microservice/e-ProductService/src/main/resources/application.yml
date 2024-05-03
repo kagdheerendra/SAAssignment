@@ -1,8 +1,6 @@
 server:
   port: 9081
 
-<<<<<<< HEAD
-=======
 logging:
   level:
     root: WARN
@@ -11,7 +9,6 @@ logging:
     org.springframework.security.oauth2: DEBUG
     org.keycloak: DEBUG
 
->>>>>>> e61648a (fix: dockerize backend and frontend)
 keycloak-client:
   server-url: http://localhost:8181
   realm: ecommerce

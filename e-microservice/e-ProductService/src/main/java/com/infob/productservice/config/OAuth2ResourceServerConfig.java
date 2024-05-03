@@ -17,10 +17,7 @@ public class OAuth2ResourceServerConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-<<<<<<< HEAD
-=======
     	System.out.println("inside OAuth2ResourceServerConfig of product service");
->>>>>>> e61648a (fix: dockerize backend and frontend)
         http.authorizeRequests()
                 .anyRequest().authenticated()
                 .and()

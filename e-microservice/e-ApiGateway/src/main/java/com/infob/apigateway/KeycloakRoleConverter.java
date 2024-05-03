@@ -16,11 +16,7 @@ public class KeycloakRoleConverter  implements Converter<Jwt, Collection<Granted
     @Override
     public Collection<GrantedAuthority> convert(Jwt jwt) {
         Map<String, Object> realmAccess = (Map<String, Object>) jwt.getClaims().get("realm_access");
-<<<<<<< HEAD
-
-=======
         System.out.println("inside KeycloakRoleConverter "+realmAccess.toString());
->>>>>>> e61648a (fix: dockerize backend and frontend)
         if (realmAccess == null || realmAccess.isEmpty()) {
             return new ArrayList<>();
         }

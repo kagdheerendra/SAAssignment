@@ -72,16 +72,11 @@ public class SpringSecurityConfig {
 //		        .authorizeExchange()
 //                .anyExchange().authenticated()
 		        .authorizeExchange(exchanges -> exchanges.pathMatchers(HttpMethod.GET).permitAll()
-<<<<<<< HEAD
-		        		.pathMatchers("/product/**").hasRole("ADMIN")
-		        		.pathMatchers("/department/**").hasAnyRole("ADMIN", "USER")
-=======
 //		        		.pathMatchers("/product/**").hasRole("ADMIN")
 //		        		.pathMatchers("/department/**").hasAnyRole("ADMIN", "USER")
 		        		.pathMatchers("/product/getAllProduct").hasAnyRole("ADMIN", "USER")
 		        		.pathMatchers("/product/addProduct").hasRole("ADMIN")
 		        		.pathMatchers("/department/getAllDepartment").hasAnyRole("ADMIN", "USER")
->>>>>>> e61648a (fix: dockerize backend and frontend)
 		                )
                 .oauth2Login()
                 .and()
@@ -92,10 +87,7 @@ public class SpringSecurityConfig {
     }
     
     private Converter<Jwt, Mono<AbstractAuthenticationToken>> grantedAuthoritiesExtractor() {
-<<<<<<< HEAD
-=======
     	System.out.println("inside grantedAuthoritiesExtractor");
->>>>>>> e61648a (fix: dockerize backend and frontend)
         JwtAuthenticationConverter jwtAuthenticationConverter =
                 new JwtAuthenticationConverter();
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter
